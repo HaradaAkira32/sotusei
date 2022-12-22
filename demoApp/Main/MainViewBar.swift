@@ -22,7 +22,6 @@ struct MainViewBar: View {
                 FullScreenView()
             }
             Spacer()
-            
             TextField("アプリタイトル",text: $searchedt)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
         }

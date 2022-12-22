@@ -11,9 +11,11 @@ struct FullScreenView: View {
     
     @Environment(\.presentationMode) var presentation
     
-    let fruits = ["2021","2022","2023","2024","2025"]
+    @State private var showYear = false
+    
+    let years = ["2021","2022","2023","2024","2025"]
     var body: some View {
-        HStack{
+        NavigationView {
             VStack {
                 Button(action:{
                     presentation.wrappedValue.dismiss()
@@ -21,19 +23,20 @@ struct FullScreenView: View {
                     Image(systemName: "chevron.backward")
                         .padding()
                         .font(.system(size: 30))
-                        .padding()
                 }
-                Spacer()
                 
-                NavigationView {
-                    List {
-                        ForEach(0 ..< fruits.count) { index in
-                            NavigationLink(destination: Text(fruits[index])) {
-                                Text(fruits[index])
-                            }
-                        }
-                        
+                
+                ForEach(years, id: \.self) { year in
+                    Button {
+                        showYear.toggle()
+                    } label: {
+                        ListCell(text: year)
+                    }.fullScreenCover(isPresented: $showYear) {
+                        MainView()
                     }
+                        
+                        
+                        
                 }
             }
         }

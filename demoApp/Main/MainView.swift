@@ -17,6 +17,7 @@ struct MainView: View {
                 EventBtn()
                     .padding(1)
                 Spacer()
+                FrameUiView()
             }
         }
     }

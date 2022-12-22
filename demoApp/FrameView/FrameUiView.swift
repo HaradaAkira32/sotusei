@@ -8,40 +8,118 @@
 import SwiftUI
 
 struct FrameUiView: View {
-    private let uiImage = UIImage(named: "TestIcon")!
-    private var appName = "アプリ名"
-    private var tag = "タグ"
+    // 仮データ
+    var appData: [CMAppData] = []
+    
+    init() {
+        appData.append(.init(id: 1, icon: "icon", title: "たろうのapp", studentID: "21cm01xx", studentName: "ますかわ　たろう"))
+        appData.append(.init(id: 2, icon: "icon", title: "じろうのapp", studentID: "21cm01xx", studentName: "ますかわ　じろう"))
+        appData.append(.init(id: 3, icon: "icon", title: "ジジのapp", studentID: "21cm01xx", studentName: "いしづか　じじ"))
+    }
+    
     var body: some View {
-        ZStack{
-            RoundedRectangle(cornerSize: .init(width: 10, height: 20))
-                .fill(Color.green.opacity(0.5))
-                .frame(width: 370, height: 150)
-            
-            VStack(alignment: .leading){
+        ZStack {
+            Color.white
+                .ignoresSafeArea()
+            ScrollView {
                 
-                HStack{
-                    Image(uiImage: uiImage)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 130, height: 130)
-                        .cornerRadius(32.0)
-                    VStack{
-                        Text(appName)
-                            .padding(30)
-                        Text(tag)
-                            .frame(width: 80,height: 50)
-                            .background(.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
+                ForEach(appData) { app in
+                    Button {
+                        // 画面遷移
+                    } label: {
+                        CardView(title: app.title, studentID: app.studentID, studentName: app.studentName)
                     }
+                    
                 }
             }
         }
     }
+    
+    // カードのView
+    struct CardView: View {
+        @State var isFavorited = false
+        
+        let title: String
+        let studentID: String
+        let studentName: String
+        
+        var body: some View {
+            ZStack {
+                // 背景の白いカード
+                Rectangle()
+                    .frame(width: 365, height: 180)
+                    .cornerRadius(10.0)
+                    .foregroundColor(.white)
+                // 影なんかつけちゃったり
+                    .shadow(color: .gray, radius: 1, x: 5, y: 5)
+                
+                // お気に入りボタン
+                HStack {
+                    Spacer()
+                        .frame(width: 270)
+                    VStack {
+                        Button {
+                            isFavorited.toggle()
+                            
+                        } label: {
+                            // いいねすると星が光る
+                            Image(systemName: isFavorited ? "star.fill" : "star")
+                                .font(.system(size: 25.0))
+                            
+                            // いいねすると星が光る
+                                .foregroundColor(isFavorited ? .yellow : .gray)
+                        }
+                        Spacer()
+                            .frame(height: 100.0)
+                    }
+                }
+                
+                
+                HStack {
+                    //                アプリのアイコン。ここは画像をどういう扱いするかで変わる。
+                    Rectangle()
+                        .frame(width: 120, height: 120)
+                        .cornerRadius(20.0)
+                        .foregroundColor(Color(uiColor: .systemMint))
+                    Spacer()
+                        .frame(width: 160)
+                    
+                }
+                
+                // アプリ名、名前
+                HStack {
+                    Spacer()
+                        .frame(width: 80)
+                    VStack {
+                        
+                        // FIXME: この辺は、長さによって大きさを変えたいねぇ…
+                        Text(title)
+                            .font(.title3)
+                            .padding(.bottom)
+                        Text(studentID)
+                            .font(.caption)
+                        Text(studentName)
+                            .font(.caption)
+                    }
+                    // ボタンでこのView使うと色変になるから防止のために色を指定する
+                    .foregroundColor(.black)
+                }
+            }
+        }
+    }
+    
+    struct FrameUiView_Previews: PreviewProvider {
+        static var previews: some View {
+            FrameUiView()
+        }
+    }
 }
 
-struct FrameUiView_Previews: PreviewProvider {
-    static var previews: some View {
-        FrameUiView()
-    }
+
+struct CMAppData: Codable, Identifiable {
+    let id: Int
+    let icon: String
+    let title: String
+    let studentID: String
+    let studentName: String
 }

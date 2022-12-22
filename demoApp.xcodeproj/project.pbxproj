@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F39FAEC29503045007E1860 /* appExpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FAEB29503045007E1860 /* appExpView.swift */; };
+		7F39FAEE295030E9007E1860 /* backButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FAED295030E9007E1860 /* backButtonView.swift */; };
+		7F39FAF0295031D4007E1860 /* expImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FAEF295031D4007E1860 /* expImageView.swift */; };
+		7F39FB0C29513F21007E1860 /* textChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F39FB0B29513F21007E1860 /* textChange.swift */; };
 		7F4DE1FE293EE3D100E1CAB2 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DE1FD293EE3D100E1CAB2 /* MenuButton.swift */; };
 		7F6863ED2942D3E300467070 /* FrameUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6863EC2942D3E300467070 /* FrameUiView.swift */; };
 		7F6863EF2942D45F00467070 /* EventBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6863EE2942D45F00467070 /* EventBtn.swift */; };
+		7FABA55029498ECA001A86CC /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FABA54F29498ECA001A86CC /* ListCell.swift */; };
 		7FB860252941C1B00027B410 /* SaidMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB860242941C1B00027B410 /* SaidMenu.swift */; };
 		7FB860272941C66C0027B410 /* FullScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB860262941C66C0027B410 /* FullScreenView.swift */; };
 		7FB860292941CA030027B410 /* MainViewBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB860282941CA030027B410 /* MainViewBar.swift */; };
@@ -20,12 +25,18 @@
 		7FEE8D1729306A270084D720 /* TagButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1629306A270084D720 /* TagButtonView.swift */; };
 		7FEE8D1929306C650084D720 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1829306C650084D720 /* MainView.swift */; };
 		7FEE8D1B29306D010084D720 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1A29306D010084D720 /* TagListView.swift */; };
+		7FF762392951600400226997 /* TextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF762382951600400226997 /* TextFiledView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F39FAEB29503045007E1860 /* appExpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appExpView.swift; sourceTree = "<group>"; };
+		7F39FAED295030E9007E1860 /* backButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backButtonView.swift; sourceTree = "<group>"; };
+		7F39FAEF295031D4007E1860 /* expImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expImageView.swift; sourceTree = "<group>"; };
+		7F39FB0B29513F21007E1860 /* textChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textChange.swift; sourceTree = "<group>"; };
 		7F4DE1FD293EE3D100E1CAB2 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		7F6863EC2942D3E300467070 /* FrameUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameUiView.swift; sourceTree = "<group>"; };
 		7F6863EE2942D45F00467070 /* EventBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBtn.swift; sourceTree = "<group>"; };
+		7FABA54F29498ECA001A86CC /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		7FB860242941C1B00027B410 /* SaidMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaidMenu.swift; sourceTree = "<group>"; };
 		7FB860262941C66C0027B410 /* FullScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenView.swift; sourceTree = "<group>"; };
 		7FB860282941CA030027B410 /* MainViewBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewBar.swift; sourceTree = "<group>"; };
@@ -37,6 +48,7 @@
 		7FEE8D1629306A270084D720 /* TagButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonView.swift; sourceTree = "<group>"; };
 		7FEE8D1829306C650084D720 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7FEE8D1A29306D010084D720 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		7FF762382951600400226997 /* TextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F39FAEA29502EB5007E1860 /* ExplanationView */ = {
+			isa = PBXGroup;
+			children = (
+				7F39FAEB29503045007E1860 /* appExpView.swift */,
+				7F39FAEF295031D4007E1860 /* expImageView.swift */,
+				7F39FAED295030E9007E1860 /* backButtonView.swift */,
+				7F39FB0B29513F21007E1860 /* textChange.swift */,
+				7FF762382951600400226997 /* TextFiledView.swift */,
+			);
+			path = ExplanationView;
+			sourceTree = "<group>";
+		};
 		7F6863EB2942D3C700467070 /* FrameView */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				7F4DE1FD293EE3D100E1CAB2 /* MenuButton.swift */,
+				7FABA54F29498ECA001A86CC /* ListCell.swift */,
 				7FB860262941C66C0027B410 /* FullScreenView.swift */,
 				7FB860242941C1B00027B410 /* SaidMenu.swift */,
 			);
@@ -114,6 +139,7 @@
 		7FEE8D072930691B0084D720 /* demoApp */ = {
 			isa = PBXGroup;
 			children = (
+				7F39FAEA29502EB5007E1860 /* ExplanationView */,
 				7F6863EB2942D3C700467070 /* FrameView */,
 				7FEE8D082930691B0084D720 /* demoAppApp.swift */,
 				7FB860232941C18F0027B410 /* Content */,
@@ -210,9 +236,15 @@
 				7F6863ED2942D3E300467070 /* FrameUiView.swift in Sources */,
 				7F4DE1FE293EE3D100E1CAB2 /* MenuButton.swift in Sources */,
 				7FEE8D1929306C650084D720 /* MainView.swift in Sources */,
+				7F39FB0C29513F21007E1860 /* textChange.swift in Sources */,
 				7FB860272941C66C0027B410 /* FullScreenView.swift in Sources */,
+				7F39FAEC29503045007E1860 /* appExpView.swift in Sources */,
+				7F39FAF0295031D4007E1860 /* expImageView.swift in Sources */,
 				7FB860252941C1B00027B410 /* SaidMenu.swift in Sources */,
 				7FEE8D092930691B0084D720 /* demoAppApp.swift in Sources */,
+				7FF762392951600400226997 /* TextFiledView.swift in Sources */,
+				7FABA55029498ECA001A86CC /* ListCell.swift in Sources */,
+				7F39FAEE295030E9007E1860 /* backButtonView.swift in Sources */,
 				7FEE8D1729306A270084D720 /* TagButtonView.swift in Sources */,
 				7FB860292941CA030027B410 /* MainViewBar.swift in Sources */,
 			);
