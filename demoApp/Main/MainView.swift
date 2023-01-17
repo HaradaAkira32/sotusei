@@ -8,18 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
+    ///true: 文化祭　false:卒業制作
+    @State var selectEvent : Int = 0
     var body: some View{
         ZStack{
+            
             VStack{
                 MainViewBar()
+                    
                 TagListView()
                     .padding(10)
-                EventBtn()
+                EventBtn(selectEvent: $selectEvent)
                     .padding(1)
                 Spacer()
                 FrameUiView()
+                 
             }
-        }
+        }.background(Color.gray.opacity(0.3).edgesIgnoringSafeArea(.all))
     }
 }
 

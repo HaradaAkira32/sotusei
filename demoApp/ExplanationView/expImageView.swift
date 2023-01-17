@@ -34,12 +34,6 @@ struct expImageView: View {
                                           axis: (x: 0, y: 1, z: 0))
                 }
             }
-            HStack{
-                Image(systemName: "circle")
-                Image(systemName: "circle")
-                Image(systemName: "circle")
-                Image(systemName: "circle")
-            }
         }
     }
 }

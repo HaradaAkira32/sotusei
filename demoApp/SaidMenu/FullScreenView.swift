@@ -15,31 +15,35 @@ struct FullScreenView: View {
     
     let years = ["2021","2022","2023","2024","2025"]
     var body: some View {
-        NavigationView {
-            VStack {
-                Button(action:{
-                    presentation.wrappedValue.dismiss()
-                }){
-                    Image(systemName: "chevron.backward")
-                        .padding()
-                        .font(.system(size: 30))
+        
+        VStack {
+            Button(action:{
+                presentation.wrappedValue.dismiss()
+            }){
+                Image(systemName: "chevron.backward")
+                    .padding()
+                    .font(.system(size: 30))
+            }
+            
+            
+            ForEach(years, id: \.self) { year in
+                Button {
+                    showYear.toggle()
+                } label: {
+                    ListCell(text: year)
+                        .frame(width: 350,height: 50)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.gray, lineWidth: 5)
+                        )
+                        .padding(3)
+                }.fullScreenCover(isPresented: $showYear) {
+                    MainView()
                 }
                 
-                
-                ForEach(years, id: \.self) { year in
-                    Button {
-                        showYear.toggle()
-                    } label: {
-                        ListCell(text: year)
-                    }.fullScreenCover(isPresented: $showYear) {
-                        MainView()
-                    }
-                        
-                        
-                        
-                }
             }
         }
+        
     }
 }
 struct FullScreenView_Previews: PreviewProvider {

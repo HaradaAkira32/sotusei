@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FrameUiView: View {
+    @State private var isShowFullScreen = false
     // 仮データ
     var appData: [CMAppData] = []
     
@@ -19,17 +20,18 @@ struct FrameUiView: View {
     
     var body: some View {
         ZStack {
-            Color.white
-                .ignoresSafeArea()
             ScrollView {
                 
                 ForEach(appData) { app in
                     Button {
-                        // 画面遷移
+                        isShowFullScreen = true
                     } label: {
                         CardView(title: app.title, studentID: app.studentID, studentName: app.studentName)
                     }
-                    
+                    .fullScreenCover(isPresented: $isShowFullScreen){
+                        appExpView(isShowFullScreen: $isShowFullScreen)
+                        
+                    }
                 }
             }
         }
@@ -50,8 +52,14 @@ struct FrameUiView: View {
                     .frame(width: 365, height: 180)
                     .cornerRadius(10.0)
                     .foregroundColor(.white)
+                    .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color.black, lineWidth: 2)
+                    )
+                    .cornerRadius(30)
                 // 影なんかつけちゃったり
-                    .shadow(color: .gray, radius: 1, x: 5, y: 5)
+                //一回とりました
+//                    .shadow(color: .gray, radius: 1, x: 5, y: 5)
                 
                 // お気に入りボタン
                 HStack {

@@ -8,30 +8,15 @@
 import SwiftUI
 
 struct textChange: View {
+    @State private var selection : Int = 2
     var body: some View {
         VStack{
-            HStack{
-                Button(action: {
-                    
-                }){
-                    Text("基本情報")
-                        .frame(width: 120,height: 50)
-                        .background(.gray.opacity(0.5))
-                        .foregroundColor(.black)
-                        .cornerRadius(15)
-                        .padding(10)
-                }
-      
-                Button(action: {
-                    
-                }){
-                    Text("作者コメント")
-                        .frame(width: 120,height: 50)
-                        .background(.gray.opacity(0.5))
-                        .foregroundColor(.black)
-                        .cornerRadius(15)
-                }
+            Picker("", selection: self.$selection) {
+                Text("基本情報").tag(1)
+                Text("作者コメント").tag(2)
+                
             }
+            .pickerStyle(SegmentedPickerStyle())
         }
     }
 }

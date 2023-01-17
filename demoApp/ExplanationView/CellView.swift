@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct cellView: View {
+struct CellView: View {
+    var text : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack{
+            Text(text)
+                .padding(30)
+            Spacer()
+        }
     }
 }
-
 struct cellView_Previews: PreviewProvider {
     static var previews: some View {
-        cellView()
+        CellView(text: "関連情報")
     }
 }

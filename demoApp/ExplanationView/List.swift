@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct List: Hashable{
+    var title : String
+    var texts : [String]
+}
+
+extension List {
+    static var lists: [List] {
+        return [
+            List(title: "基本情報", texts: ["IOS","Xcode"]),
+            List(title: "基本情報", texts: ["andorid","AndoroidStudio"])
+        ]
+    }
+}

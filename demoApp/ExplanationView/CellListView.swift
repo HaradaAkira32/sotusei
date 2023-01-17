@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct CellListView: View {
+    var list:List
+    @State var isShowList = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:0){
+            TitleCellView(title: list.title, isShowList: $isShowList)
+            if isShowList {
+                ForEach(list.texts, id: \.self) { text in
+                    CellView(text:text)
+                }
+            }
+        }
     }
 }
 
 struct CellListView_Previews: PreviewProvider {
     static var previews: some View {
-        CellListView()
+        CellListView(list: List.lists[0])
     }
 }

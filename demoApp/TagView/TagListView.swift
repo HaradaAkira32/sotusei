@@ -11,7 +11,7 @@ struct TagListView: View {
     var list = ["iOS", "Android","Iot","AR","firebase","Bluetooth"]
     
     var body: some View {
-        ScrollView([.horizontal]){
+        ScrollView([.horizontal],showsIndicators: false){
             HStack{
                 ForEach(0..<self.list.count) { num in
                     TagButtonView(text: list[num])
