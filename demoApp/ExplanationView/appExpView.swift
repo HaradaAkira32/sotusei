@@ -16,16 +16,24 @@ struct appExpView: View {
             Color.gray.opacity(0.3).edgesIgnoringSafeArea(.all)
             
             VStack{
-                HStack{
-                    backButtonView() {
-                        isShowFullScreen.toggle()
+                ZStack {
+                    HStack{
+                        backButtonView() {
+                            isShowFullScreen.toggle()
+                            
+                        }
+                        Spacer()
                     }
                     
-                    Text(title)
-                        .frame(width: 270,height: 60)
-                        .background(Color.gray.opacity(0.5))
-                        .cornerRadius(15)
-                        .padding(30)
+                    HStack {
+                        Text(title)
+                            .frame(width: 270,height: 60)
+                            .background(Color.gray.opacity(0.5))
+                            .cornerRadius(15)
+                            .padding(30)
+                        
+                    }
+                    
                 }
                 expImageView()
                 

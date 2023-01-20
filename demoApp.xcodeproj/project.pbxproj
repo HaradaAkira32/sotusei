@@ -29,6 +29,7 @@
 		7FEE8D1729306A270084D720 /* TagButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1629306A270084D720 /* TagButtonView.swift */; };
 		7FEE8D1929306C650084D720 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1829306C650084D720 /* MainView.swift */; };
 		7FEE8D1B29306D010084D720 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8D1A29306D010084D720 /* TagListView.swift */; };
+		7FF59D772979198600AEB1F6 /* SelectBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF59D762979198600AEB1F6 /* SelectBarView.swift */; };
 		7FF762392951600400226997 /* TextFiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF762382951600400226997 /* TextFiledView.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		7FEE8D1629306A270084D720 /* TagButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonView.swift; sourceTree = "<group>"; };
 		7FEE8D1829306C650084D720 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7FEE8D1A29306D010084D720 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		7FF59D762979198600AEB1F6 /* SelectBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBarView.swift; sourceTree = "<group>"; };
 		7FF762382951600400226997 /* TextFiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFiledView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				7F39FAEF295031D4007E1860 /* expImageView.swift */,
 				7F39FAED295030E9007E1860 /* backButtonView.swift */,
 				7F39FB0B29513F21007E1860 /* textChange.swift */,
+				7FF59D762979198600AEB1F6 /* SelectBarView.swift */,
 				7FF762382951600400226997 /* TextFiledView.swift */,
 				7F4570B8295538CF00CDA27B /* CellView.swift */,
 				7F4570BC2955406400CDA27B /* CellListView.swift */,
@@ -262,6 +265,7 @@
 				7F39FAEE295030E9007E1860 /* backButtonView.swift in Sources */,
 				7FEE8D1729306A270084D720 /* TagButtonView.swift in Sources */,
 				7F4570B9295538CF00CDA27B /* CellView.swift in Sources */,
+				7FF59D772979198600AEB1F6 /* SelectBarView.swift in Sources */,
 				7FB860292941CA030027B410 /* MainViewBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

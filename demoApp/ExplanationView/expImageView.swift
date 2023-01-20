@@ -8,33 +8,24 @@
 import SwiftUI
 
 struct expImageView: View {
+    @State var selection: Int = 0
+    let images : [String] =
+        ["TestIcon","TestIcon2","TestIcon3","TestIcon2","TestIcon3"]
     var body: some View {
         VStack{
-            HStack{
-                //戻るボタン
-                Button(action:{
-                    //アクション
-                }){
-                    Image(systemName: "chevron.backward")
-                        .padding()
-                        .font(.system(size: 30))
-                }
-                Image("TestIcon")
-                    .resizable()
-                    .frame(width: 250,height: 250)
-                
-                //進むボタン
-                Button(action:{
-                    //アクション
-                }){
-                    Image(systemName: "chevron.backward")
-                        .padding()
-                        .font(.system(size: 30))
-                        .rotation3DEffect(.degrees(180),
-                                          axis: (x: 0, y: 1, z: 0))
+            TabView(selection: $selection) {
+                ForEach(0..<images.count) { index in
+                    Image(images[index])
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .tag(index)
                 }
             }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            SelectBarView(count: images.count, selected: $selection)
+            
         }
+       
     }
 }
 
